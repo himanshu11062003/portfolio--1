@@ -265,8 +265,9 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;line-height:1.2;}
   will-change: transform, opacity;
 }
 .tl-content:hover{border-color:var(--teal);box-shadow:var(--glow);}
-.tl-content h3{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
-.tl-content h4{font-size:0.85rem;font-weight:500;color:var(--teal);margin-bottom:8px;}
+.tl-content h3{font-size:1.1rem;font-weight:700;color:var(--text);margin-bottom:8px;}
+.tl-org{font-size:0.95rem;font-weight:600;color:var(--teal);margin-bottom:2px;}
+.tl-location{font-size:0.85rem;color:var(--text-muted);opacity:0.8;margin-bottom:12px;}
 .tl-date{
   font-size:0.78rem;color:var(--text-muted);
   display:inline-block;margin-bottom:12px;
