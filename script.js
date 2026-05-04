@@ -153,3 +153,30 @@ if (form) {
         }
     });
 }
+
+// ====== TIMELINE SCROLL BALL ======
+function updateTimelineBalls() {
+    const pairs = [
+        { timeline: document.getElementById('exp-timeline'), ball: document.getElementById('exp-ball') },
+        { timeline: document.getElementById('edu-timeline'), ball: document.getElementById('edu-ball') }
+    ];
+
+    pairs.forEach(({ timeline, ball }) => {
+        if (!timeline || !ball) return;
+
+        const rect = timeline.getBoundingClientRect();
+        const totalHeight = timeline.offsetHeight;
+
+        // "read" point = 55% down the viewport
+        const viewportRead = window.innerHeight * 0.55;
+        // how far the read point has traveled into the timeline from its top
+        const traveled = viewportRead - rect.top;
+        // clamp between 0 and the full height of the timeline
+        const clamped = Math.max(0, Math.min(totalHeight, traveled));
+
+        ball.style.top = clamped + 'px';
+    });
+}
+
+window.addEventListener('scroll', updateTimelineBalls, { passive: true });
+updateTimelineBalls(); // run once on page load
