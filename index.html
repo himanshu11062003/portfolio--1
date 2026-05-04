@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Himanshu Kumar | Cyber Security Analyst & Full Stack Developer</title>
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- DevIcons for Skills -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Loading Animation -->
+    <div id="loader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header / Navbar -->
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">Himanshu<span>.</span></a>
+            <div class="mobile-toggle">
+                <i class="fas fa-bars"></i>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#certifications">Certifications</a></li>
+                <li><a href="#contact" class="btn" style="padding: 8px 20px; font-size: 0.9rem;">Contact Me</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-glow"></div>
+        <div class="hero-glow-2"></div>
+        <div class="container">
+            <div class="hero-content fade-up">
+                <span class="greeting">Hello, World! I am</span>
+                <h1 class="hero-title">Himanshu Kumar</h1>
+                <h2 class="hero-subtitle">
+                    I am a <span class="type-text"></span><span class="cursor"></span>
+                </h2>
+                <p class="hero-desc">
+                    "Securing Systems & Building Scalable Web Applications"
+                </p>
+                <div class="hero-btns">
+                    <a href="#projects" class="btn">View Projects <i class="fas fa-arrow-right"></i></a>
+                    <div class="dropdown">
+                        <button class="btn dropdown-toggle">Download CV <i class="fas fa-chevron-down"></i></button>
+                        <div class="dropdown-menu">
+                            <a href="updated-cyber.pdf" download class="dropdown-item"><i class="fas fa-shield-alt"></i> Cyber Security CV</a>
+                            <a href="fullstack-cv-updated.pdf" download class="dropdown-item"><i class="fas fa-code"></i> Full Stack CV</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+        <h2 class="section-title fade-in">About Me</h2>
+        <div class="about-content">
+            <div class="about-image slide-left">
+                <img src="photo.jpg" alt="Himanshu Kumar">
+            </div>
+            <div class="about-text slide-right">
+                <p>I am a highly motivated <strong>Cyber Security Analyst</strong> with hands-on experience in Vulnerability Assessment and Penetration Testing (VAPT). My core expertise lies in identifying and mitigating security flaws to protect critical infrastructure.</p>
+                <p>Alongside my cybersecurity expertise, I am a capable <strong>Full Stack Developer</strong>. I love designing and building secure, efficient, and scalable web applications from the ground up.</p>
+                <ul>
+                    <li><i class="fas fa-shield-alt"></i> VAPT Specialist</li>
+                    <li><i class="fas fa-bug"></i> Vulnerability Identification (XSS, SQLi)</li>
+                    <li><i class="fas fa-tools"></i> Security Tools (Burp Suite, Nmap, ZAP)</li>
+                    <li><i class="fas fa-code"></i> Full Stack Web Development</li>
+                    <li><i class="fab fa-react"></i> React & Node.js Ecosystem</li>
+                    <li><i class="fas fa-server"></i> Secure & Scalable Systems</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2 class="section-title fade-in">My Skills</h2>
+        <div class="skills-grid">
+            <!-- Programming -->
+            <div class="skill-card fade-up">
+                <i class="fas fa-code skill-icon"></i>
+                <h3>Programming</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="devicon-cplusplus-plain"></i> C++</span>
+                    <span class="skill-tag"><i class="devicon-python-plain"></i> Python</span>
+                    <span class="skill-tag"><i class="devicon-java-plain"></i> Java</span>
+                </div>
+            </div>
+
+            <!-- Web Development -->
+            <div class="skill-card fade-up" style="transition-delay: 0.1s;">
+                <i class="fas fa-laptop-code skill-icon"></i>
+                <h3>Web Development</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="devicon-html5-plain"></i> HTML</span>
+                    <span class="skill-tag"><i class="devicon-css3-plain"></i> CSS</span>
+                    <span class="skill-tag"><i class="devicon-javascript-plain"></i> JavaScript</span>
+                    <span class="skill-tag"><i class="devicon-react-original"></i> React</span>
+                    <span class="skill-tag"><i class="devicon-nodejs-plain"></i> Node.js</span>
+                </div>
+            </div>
+
+            <!-- Cybersecurity -->
+            <div class="skill-card fade-up" style="transition-delay: 0.2s;">
+                <i class="fas fa-user-secret skill-icon"></i>
+                <h3>Cybersecurity Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Wireshark</span>
+                    <span class="skill-tag">Nmap</span>
+                    <span class="skill-tag">Burp Suite</span>
+                    <span class="skill-tag">Metasploit</span>
+                    <span class="skill-tag">OWASP ZAP</span>
+                    <span class="skill-tag">MITM Proxy</span>
+                </div>
+            </div>
+
+            <!-- Databases & Tools -->
+            <div class="skill-card fade-up" style="transition-delay: 0.3s;">
+                <i class="fas fa-database skill-icon"></i>
+                <h3>Databases & Tools</h3>
+                <div class="skill-list">
+                    <span class="skill-tag"><i class="devicon-mysql-plain"></i> MySQL</span>
+                    <span class="skill-tag"><i class="devicon-mongodb-plain"></i> MongoDB</span>
+                    <span class="skill-tag"><i class="devicon-git-plain"></i> Git</span>
+                    <span class="skill-tag"><i class="devicon-github-original"></i> GitHub</span>
+                    <span class="skill-tag">REST APIs</span>
+                    <span class="skill-tag">Postman</span>
+                </div>
+            </div>
+
+            <!-- Soft Skills -->
+            <div class="skill-card fade-up" style="transition-delay: 0.4s;">
+                <i class="fas fa-users skill-icon"></i>
+                <h3>Soft Skills</h3>
+                <div class="skill-list">
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Communication</span>
+                    <span class="skill-tag">Leadership</span>
+                    <span class="skill-tag">Adaptability</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2 class="section-title fade-in">Experience</h2>
+        <div class="timeline">
+            <div class="timeline-item left slide-left">
+                <div class="timeline-content">
+                    <h3>Cyber Security Analyst</h3>
+                    <h4>Embtel Web Solutions</h4>
+                    <span class="timeline-date">August 2026 – Present</span>
+                    <ul>
+                        <li>Performed comprehensive VAPT on various web applications to ensure robust security postures.</li>
+                        <li>Identified and documented critical vulnerabilities including XSS, SQL Injection, and security misconfigurations.</li>
+                        <li>Intercepted and manipulated HTTP requests utilizing Burp Suite for deep vulnerability analysis.</li>
+                        <li>Created detailed and actionable security reports offering strategic fixes and mitigations.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="timeline-item right slide-right" style="transition-delay: 0.1s;">
+                <div class="timeline-content">
+                    <h3>Data Structures and Algorithms Intern</h3>
+                    <h4>Cipher School</h4>
+                    <span class="timeline-date">June 2024 – July 2024</span>
+                    <ul>
+                        <li>Completed a Data Structures and Algorithms (DSA) internship using Java.</li>
+                        <li>Achieved certification for excellent performance in coding assignments and projects.</li>
+                        <li>Implemented key data structures and algorithms with a focus on efficiency and optimization.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <h2 class="section-title fade-in">Education</h2>
+        <div class="timeline">
+            <div class="timeline-item left slide-left">
+                <div class="timeline-content">
+                    <h3>Bachelor of Technology - Computer Science and Engineering</h3>
+                    <h4>Lovely Professional University, Punjab, India</h4>
+                    <span class="timeline-date">August 2022 – Present</span>
+                </div>
+            </div>
+
+            <div class="timeline-item right slide-right" style="transition-delay: 0.1s;">
+                <div class="timeline-content">
+                    <h3>Intermediate</h3>
+                    <h4>Global International School, Muzaffarpur, Bihar</h4>
+                    <span class="timeline-date">April 2020 – March 2022</span>
+                </div>
+            </div>
+
+            <div class="timeline-item left slide-left" style="transition-delay: 0.2s;">
+                <div class="timeline-content">
+                    <h3>Matriculation</h3>
+                    <h4>Delhi Public School International, Muzaffarpur, Bihar</h4>
+                    <span class="timeline-date">April 2019 – March 2020</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2 class="section-title fade-in">Featured Projects</h2>
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card fade-up">
+                <div class="project-img">
+                    <img src="istockphoto-1335959802-612x612.jpg" alt="Phishing Simulation Tool">
+                </div>
+                <div class="project-info">
+                    <h3>Phishing Simulation Tool</h3>
+                    <p>Built a simulation platform using Python and Web Tech. It ethically simulates login pages for credential harvesting to be used strictly for awareness and security testing purposes.</p>
+                    <div class="project-tech">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                        <span class="skill-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/himanshu11062003/Singh-Phishing-Tool.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="project-card fade-up" style="transition-delay: 0.1s;">
+                <div class="project-img">
+                    <i class="fas fa-shield-virus"></i>
+                </div>
+                <div class="project-info">
+                    <h3>Web Vulnerability Scanner</h3>
+                    <p>A Python-based automated scanner designed to detect open ports, inspect HTTP headers, and identify vulnerabilities like XSS, demonstrating fundamental VAPT concepts.</p>
+                    <div class="project-tech">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">Networking</span>
+                        <span class="skill-tag">VAPT</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/himanshu11062003/web-vulnerability-scanner.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="project-card fade-up" style="transition-delay: 0.2s;">
+                <div class="project-img">
+                    <i class="fas fa-link"></i>
+                </div>
+                <div class="project-info">
+                    <h3>URL Shortener</h3>
+                    <p>A modern React application integrated with Material UI for creating and managing shortened URLs. Features dynamic routing and LocalStorage-based session handling.</p>
+                    <div class="project-tech">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Material UI</span>
+                        <span class="skill-tag">LocalStorage</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/himanshu11062003/url-shortener-app.git" target="_blank" title="View Source"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="project-card fade-up" style="transition-delay: 0.3s;">
+                <div class="project-img">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <div class="project-info">
+                    <h3>AI Content Generator Platform</h3>
+                    <p>A Full Stack platform powered by the Gemini API that generates content based on user prompts. Engineered with a Node.js REST API and a seamless React frontend integration.</p>
+                    <div class="project-tech">
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Gemini API</span>
+                        <span class="skill-tag">REST API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/himanshu11062003/ai-generator-platform-frontend.git" target="_blank" title="Frontend Repo" style="font-size: 0.9rem;"><i class="fab fa-github"></i> Frontend</a>
+                        <a href="https://github.com/himanshu11062003/ai-generator-platform-backend.git" target="_blank" title="Backend Repo" style="font-size: 0.9rem;"><i class="fab fa-github"></i> Backend</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications & Achievements Section -->
+    <section id="certifications">
+        <h2 class="section-title fade-in">Certifications & Achievements</h2>
+        
+        <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-primary);" class="fade-up">Certifications</h3>
+        <div class="certs-grid">
+            <a href="https://www.theforage.com/completion-certificates/ifobHAoMjQs9s6bKS/gmf3ypEXBj2wvfQWC_ifobHAoMjQs9s6bKS_69b17371ff554757c9f4dcb8_1776206116517_completion_certificate.pdf" target="_blank" class="cert-card fade-up">
+                <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="cert-info">
+                    <h4>Cybersecurity Analyst Job Simulation</h4>
+                    <p>Tata (Forage)</p>
+                </div>
+            </a>
+            <a href="https://www.theforage.com/completion-certificates/9PBTqmSxAf6zZTseP/E9pA6qsdbeyEkp3ti_9PBTqmSxAf6zZTseP_69b17371ff554757c9f4dcb8_1776202484691_completion_certificate.pdf" target="_blank" class="cert-card fade-up" style="transition-delay: 0.1s;">
+                <div class="cert-icon"><i class="fas fa-lock"></i></div>
+                <div class="cert-info">
+                    <h4>Cyber Job Simulation</h4>
+                    <p>Deloitte (Forage)</p>
+                </div>
+            </a>
+            <a href="https://www.theforage.com/completion-certificates/mfxGwGDp6WkQmtmTf/vcKAB5yYAgvemepGQ_mfxGwGDp6WkQmtmTf_69b17371ff554757c9f4dcb8_1773238645005_completion_certificate.pdf" target="_blank" class="cert-card fade-up" style="transition-delay: 0.2s;">
+                <div class="cert-icon"><i class="fas fa-credit-card"></i></div>
+                <div class="cert-info">
+                    <h4>Cybersecurity Simulation</h4>
+                    <p>Mastercard (Forage)</p>
+                </div>
+            </a>
+            <div class="cert-card fade-up" style="transition-delay: 0.3s;">
+                <div class="cert-icon"><i class="fas fa-network-wired"></i></div>
+                <div class="cert-info">
+                    <h4>Introduction to Cybersecurity</h4>
+                    <p>Cisco Networking Academy</p>
+                </div>
+            </div>
+            <a href="https://coursera.org/share/9fc20cd2ff06416c0c45f29663225dec" target="_blank" class="cert-card fade-up" style="transition-delay: 0.4s;">
+                <div class="cert-icon"><i class="fas fa-search"></i></div>
+                <div class="cert-info">
+                    <h4>Digital Forensics</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+            <a href="https://coursera.org/share/3bcea4decf0e2860edcbc72c0580dc00" target="_blank" class="cert-card fade-up" style="transition-delay: 0.5s;">
+                <div class="cert-icon"><i class="fas fa-toolbox"></i></div>
+                <div class="cert-info">
+                    <h4 style="font-size: 0.9rem;">Intro to Cybersecurity Tools & Cyberattacks</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+            <a href="https://coursera.org/share/85df291ace1471f0cbd262effc0c3e37" target="_blank" class="cert-card fade-up" style="transition-delay: 0.55s;">
+                <div class="cert-icon"><i class="fas fa-shield-alt"></i></div>
+                <div class="cert-info">
+                    <h4>Intro to Cybersecurity Essentials</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+            <a href="https://www.cipherschools.com/certificate/preview?id=66a9bad1777cd431c3cc449e" target="_blank" class="cert-card fade-up" style="transition-delay: 0.6s;">
+                <div class="cert-icon"><i class="fas fa-code"></i></div>
+                <div class="cert-info">
+                    <h4>DSA Self-Paced (C++/Java)</h4>
+                    <p>Cipher School</p>
+                </div>
+            </a>
+            <a href="https://coursera.org/share/b0290158956408d2d6386248beb86f2b" target="_blank" class="cert-card fade-up" style="transition-delay: 0.7s;">
+                <div class="cert-icon"><i class="fab fa-node-js"></i></div>
+                <div class="cert-info">
+                    <h4>Back-End Apps with Node.js</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+            <a href="https://coursera.org/share/b2cf695c319632c455759b0105f5c812" target="_blank" class="cert-card fade-up" style="transition-delay: 0.8s;">
+                <div class="cert-icon"><i class="fab fa-react"></i></div>
+                <div class="cert-info">
+                    <h4>Front-End Apps with React</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+            <a href="https://coursera.org/share/e8de9605196d518e5ba5bdb138f1313b" target="_blank" class="cert-card fade-up" style="transition-delay: 0.9s;">
+                <div class="cert-icon"><i class="fab fa-github"></i></div>
+                <div class="cert-info">
+                    <h4>Getting Started with Git and GitHub</h4>
+                    <p>Coursera</p>
+                </div>
+            </a>
+        </div>
+
+        <h3 style="font-size: 1.5rem; margin-bottom: 20px; color: var(--accent-secondary);" class="fade-up">Achievements</h3>
+        <div class="certs-grid">
+            <div class="cert-card fade-up">
+                <div class="cert-icon" style="color: var(--accent-primary); background: rgba(129, 140, 248, 0.1);"><i class="fab fa-hackerrank"></i></div>
+                <div class="cert-info">
+                    <h4>Problem Solving</h4>
+                    <p>Solved 100+ problems on HackerRank</p>
+                </div>
+            </div>
+            <div class="cert-card fade-up" style="transition-delay: 0.1s;">
+                <div class="cert-icon" style="color: var(--accent-primary); background: rgba(129, 140, 248, 0.1);"><i class="fas fa-project-diagram"></i></div>
+                <div class="cert-info">
+                    <h4>Project Contributor</h4>
+                    <p>Outlier</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2 class="section-title fade-in">Get In Touch</h2>
+        <div class="contact-container">
+            <div class="contact-info slide-left">
+                <h3>Let's Connect</h3>
+                <p>I'm currently looking for new opportunities in cybersecurity and full stack development. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
+                
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <div class="contact-details">
+                        <h4>Email</h4>
+                        <a href="mailto:himanshusingh11062003@gmail.com">himanshusingh11062003@gmail.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                    <div class="contact-details">
+                        <h4>Phone</h4>
+                        <a href="tel:+917061624322">+91-7061624322</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <div class="contact-details">
+                        <h4>LinkedIn</h4>
+                        <a href="https://www.linkedin.com/in/hs2003" target="_blank">linkedin.com/in/hs2003</a>
+                    </div>
+                </div>
+
+                <div class="contact-item">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <div class="contact-details">
+                        <h4>GitHub</h4>
+                        <a href="https://github.com/himanshu11062003" target="_blank">github.com/himanshu11062003</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="contact-form slide-right">
+                <form action="https://formsubmit.co/himanshusingh11062003@gmail.com" method="POST">
+                    <input type="hidden" name="_captcha" value="false">
+                    <div class="form-group">
+                        <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="_subject" class="form-control" placeholder="Subject" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your Message" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="social-links">
+            <a href="mailto:himanshusingh11062003@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="https://github.com/himanshu11062003" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/hs2003" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p class="copyright">© 2026 Himanshu Kumar. Designed with &hearts; | All Rights Reserved.</p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
