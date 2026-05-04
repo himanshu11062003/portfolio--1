@@ -5,7 +5,7 @@ const data = [
     title: 'B.Tech – Computer Science & Engineering',
     org: 'Lovely Professional University',
     location: 'Punjab, India',
-    date: 'August 2022 – Present'
+    date: 'August 2022 – June 2026'
   },
   {
     title: 'Intermediate',
