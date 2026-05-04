@@ -402,38 +402,28 @@ section{
 /* Remove static dots - replaced by animated scroll ball */
 .timeline-item::before{ display:none; }
 
-/* Small hollow ring markers at each item position */
-.timeline-item.left::after,
-.timeline-item.right::after{
-    content:'';position:absolute;
-    width:10px;height:10px;
-    border:2px solid var(--teal);
-    border-radius:50%;
-    top:32px;
-    background:var(--bg);
-    opacity:0.5;
-}
-.timeline-item.left::after{right:-5px;}
-.timeline-item.right::after{left:-5px;}
+/* No markers - single ball only */
+.timeline-item::after{ display:none; }
+
 
 /* Animated Scroll Ball */
 .timeline-ball{
     position:absolute;
     left:50%;
     transform:translateX(-50%);
-    width:18px;height:18px;
+    width:16px;height:16px;
     background:var(--teal);
     border-radius:50%;
     border:3px solid var(--bg);
-    box-shadow:0 0 0 4px rgba(20,184,166,0.25), var(--glow-sm);
+    box-shadow:0 0 0 4px rgba(20,184,166,0.2), var(--glow-sm);
     top:0;
     z-index:10;
-    transition:top 0.08s linear;
-    animation:ballPulse 2s ease-in-out infinite;
+    transition:top 0.25s ease-out;
+    animation:ballPulse 2.5s ease-in-out infinite;
 }
 @keyframes ballPulse{
-    0%,100%{box-shadow:0 0 0 4px rgba(20,184,166,0.25),0 0 12px rgba(20,184,166,0.3);}
-    50%{box-shadow:0 0 0 7px rgba(20,184,166,0.15),0 0 20px rgba(20,184,166,0.5);}
+    0%,100%{box-shadow:0 0 0 4px rgba(20,184,166,0.2),0 0 10px rgba(20,184,166,0.25);}
+    50%{box-shadow:0 0 0 8px rgba(20,184,166,0.1),0 0 22px rgba(20,184,166,0.45);}
 }
 
 .timeline-content{
