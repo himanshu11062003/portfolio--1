@@ -423,11 +423,39 @@ footer{
 .toast-close:hover{color:var(--teal);}
 
 /* ── RESPONSIVE ── */
-@media(max-width:992px){
+@media(max-width:1024px){
   .hero-section{height:auto;min-height:100vh;flex-direction:column;}
-  .hero-left{padding:calc(var(--nav-height)+30px) 30px 60px;flex:none;position:relative;z-index:10;}
-  .hero-right{clip-path:none;flex:0 0 380px;width:100%;align-items:flex-end;margin-top:20px;}
-  .hero-photo{height:100%;width:auto;max-width:320px;max-height:380px;margin:0 auto;}
+  .hero-left{padding:calc(var(--nav-height)+30px) 30px 40px;flex:none;position:relative;z-index:10;}
+  .hero-right{
+    clip-path:none;
+    flex:1;
+    width:100%;
+    min-height:450px;
+    align-items:stretch;
+    margin-top:0;
+  }
+  .hero-photo{
+    height:100%;
+    width:100%;
+    max-width:100%;
+    max-height:none;
+    margin:0;
+    object-fit:cover;
+    object-position:center 20%;
+  }
+  .hero-right::before {
+    background:
+      /* Strong top fade to blend perfectly with text area above */
+      linear-gradient(to bottom, rgba(11,19,43,1) 0%, rgba(11,19,43,0.8) 15%, rgba(11,19,43,0) 45%),
+      /* Bottom fade to blend into background */
+      linear-gradient(to top, rgba(11,19,43,1) 0%, rgba(11,19,43,0) 25%),
+      /* Left soft edge fade */
+      linear-gradient(to right, rgba(11,19,43,0.9) 0%, rgba(11,19,43,0) 20%),
+      /* Right soft edge fade */
+      linear-gradient(to left, rgba(11,19,43,0.9) 0%, rgba(11,19,43,0) 20%),
+      /* Premium Vignette */
+      radial-gradient(ellipse 80% 80% at 50% 40%, transparent 45%, rgba(11,19,43,0.6) 100%);
+  }
   .contact-grid{grid-template-columns:1fr;}
   .timeline::before{left:20px;}
   .tl-item,.tl-item.left,.tl-item.right{width:100%;left:0;padding-left:54px;padding-right:0;justify-content:flex-start;}
