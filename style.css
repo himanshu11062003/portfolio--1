@@ -135,17 +135,10 @@ section{
     border-radius:2px;
 }
 
-/* ===== FADE / SLIDE ANIMATIONS ===== */
-.fade-in,.fade-up,.slide-left,.slide-right{
-    opacity:0;transition:opacity 0.7s ease, transform 0.7s ease;
-}
-.fade-in{transform:translateY(0);}
-.fade-up{transform:translateY(40px);}
-.slide-left{transform:translateX(-50px);}
-.slide-right{transform:translateX(50px);}
-.fade-in.visible,.fade-up.visible,.slide-left.visible,.slide-right.visible{
-    opacity:1;transform:translate(0);
-}
+/* ===== FADE / SLIDE ANIMATIONS (now handled by GSAP) ===== */
+/* Classes kept for backward compat but GSAP controls initial states */
+.fade-in,.fade-up,.slide-left,.slide-right{ }
+
 
 /* ===== HERO ===== */
 #home{
