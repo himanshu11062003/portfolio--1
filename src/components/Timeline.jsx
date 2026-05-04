@@ -47,7 +47,10 @@ export default function Timeline({ id, title, items }) {
             transition={{ duration: 0.4, delay: i * 0.05, ease: [0.16,1,0.3,1] }}>
             <div className="tl-content">
               <h3>{item.title}</h3>
-              <h4>{item.org}</h4>
+              <h4>
+                {item.org}
+                {item.location && <><br />{item.location}</>}
+              </h4>
               <span className="tl-date">{item.date}</span>
               {item.points && (
                 <ul>{item.points.map((p, j) => <li key={j}>{p}</li>)}</ul>
