@@ -23,6 +23,33 @@ navLinks.querySelectorAll('a').forEach(link => {
     });
 });
 
+// ====== CV DROPDOWN CLICK TOGGLE ======
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+if (dropdownToggle && dropdownMenu) {
+    dropdownToggle.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('open');
+        // rotate chevron
+        const chevron = dropdownToggle.querySelector('.fa-chevron-down');
+        if (chevron) chevron.style.transform = dropdownMenu.classList.contains('open') ? 'rotate(180deg)' : 'rotate(0deg)';
+    });
+    // Close when clicking a CV item
+    dropdownMenu.querySelectorAll('.dropdown-item').forEach(item => {
+        item.addEventListener('click', () => {
+            dropdownMenu.classList.remove('open');
+            const chevron = dropdownToggle.querySelector('.fa-chevron-down');
+            if (chevron) chevron.style.transform = 'rotate(0deg)';
+        });
+    });
+    // Close when clicking anywhere else
+    document.addEventListener('click', () => {
+        dropdownMenu.classList.remove('open');
+        const chevron = dropdownToggle.querySelector('.fa-chevron-down');
+        if (chevron) chevron.style.transform = 'rotate(0deg)';
+    });
+}
+
 // ====== HEADER SCROLL ======
 const header = document.querySelector('header');
 window.addEventListener('scroll', () => {
