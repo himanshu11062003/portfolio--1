@@ -36,7 +36,7 @@ html {
 
 body {
     font-family: 'Inter', sans-serif;
-    background: linear-gradient(-45deg, #ffffff, #f0f0f0, #e8e8e8, #fafafa);
+    background: linear-gradient(-45deg, #ffffff, #f5f0eb, #e6dcd3, #faf8f5);
     background-size: 400% 400%;
     animation: gradientBG 15s ease infinite;
     color: var(--text-primary);
@@ -221,6 +221,7 @@ header.scrolled {
 .nav-links {
     display: flex;
     gap: 30px;
+    align-items: center;
 }
 
 .nav-links a {
