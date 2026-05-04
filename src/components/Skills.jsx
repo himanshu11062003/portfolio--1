@@ -40,7 +40,7 @@ export default function Skills() {
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.2 }}
-            transition={{ duration: 0.3, delay: i * 0.05 ease: [0.16,1,0.3,1] }}>
+            transition={{ duration: 0.3, delay: i * 0.05, ease: [0.16,1,0.3,1] }}>
             <div className="skill-icon">{s.icon}</div>
             <h3>{s.title}</h3>
             <div className="skill-tags">

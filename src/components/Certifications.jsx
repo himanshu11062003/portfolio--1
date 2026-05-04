@@ -62,7 +62,7 @@ export default function Certifications() {
             initial={{ scale: 0.85, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.3, delay: i * 0.05 ease: [0.16,1,0.3,1] }}>
+            transition={{ duration: 0.3, delay: i * 0.05, ease: [0.16,1,0.3,1] }}>
             <Counter target={a.target} />
             <p>{a.label}</p>
           </motion.div>
