@@ -123,11 +123,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 body: new URLSearchParams(formData).toString(),
             })
             .then(() => {
-                btn.innerHTML = 'Message Sent! <i class="fas fa-check"></i>';
+                btn.innerHTML = originalText;
                 contactForm.reset();
+                
+                // Show Fancy Toast
+                const toast = document.getElementById('toast-notification');
+                toast.classList.add('show');
+                
+                // Auto hide after 5 seconds
                 setTimeout(() => {
-                    btn.innerHTML = originalText;
-                }, 3000);
+                    toast.classList.remove('show');
+                }, 5000);
             })
             .catch((error) => {
                 btn.innerHTML = 'Error! Try Again <i class="fas fa-times"></i>';
