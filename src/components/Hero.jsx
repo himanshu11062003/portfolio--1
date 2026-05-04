@@ -38,11 +38,11 @@ function useTyping(words) {
 
 const stagger = {
   hidden: {},
-  show: { transition: { staggerChildren: 0.12 } }
+  show: { transition: { staggerChildren: 0.05 } }
 };
 const item = {
   hidden: { y: 30, opacity: 0 },
-  show: { y: 0, opacity: 1, transition: { duration: 0.7, ease: [0.16,1,0.3,1] } }
+  show: { y: 0, opacity: 1, transition: { duration: 0.4, ease: [0.16,1,0.3,1] } }
 };
 
 export default function Hero() {
@@ -89,7 +89,7 @@ export default function Hero() {
       {/* RIGHT */}
       <motion.div className="hero-right"
         initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1, delay: 0.5, ease: [0.16,1,0.3,1] }}>
+        transition={{ duration: 0.5, delay: 0.5, ease: [0.16,1,0.3,1] }}>
         <img src="/photo.jpg" alt="Himanshu Kumar" className="hero-photo" />
       </motion.div>
     </section>

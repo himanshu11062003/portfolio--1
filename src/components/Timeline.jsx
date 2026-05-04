@@ -23,7 +23,7 @@ export default function Timeline({ id, title, items }) {
     <section id={id} className="section">
       <motion.h2 className="section-title"
         initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}>
+        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.4 }}>
         {title}
       </motion.h2>
       <div className="timeline" ref={tlRef}>
@@ -34,7 +34,7 @@ export default function Timeline({ id, title, items }) {
             initial={{ x: i % 2 === 0 ? -60 : 60, opacity: 0 }}
             whileInView={{ x: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.8, delay: i * 0.1, ease: [0.16,1,0.3,1] }}>
+            transition={{ duration: 0.4, delay: i * 0.05 ease: [0.16,1,0.3,1] }}>
             <div className="tl-content">
               <h3>{item.title}</h3>
               <h4>{item.org}</h4>

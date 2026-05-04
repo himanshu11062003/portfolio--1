@@ -51,7 +51,7 @@ export default function Certifications() {
     <section id="certifications" className="section">
       <motion.h2 className="section-title"
         initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}>
+        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.4 }}>
         Certifications &amp; Achievements
       </motion.h2>
 
@@ -62,7 +62,7 @@ export default function Certifications() {
             initial={{ scale: 0.85, opacity: 0 }}
             whileInView={{ scale: 1, opacity: 1 }}
             viewport={{ once: true, amount: 0.3 }}
-            transition={{ duration: 0.6, delay: i * 0.1, ease: [0.16,1,0.3,1] }}>
+            transition={{ duration: 0.3, delay: i * 0.05 ease: [0.16,1,0.3,1] }}>
             <Counter target={a.target} />
             <p>{a.label}</p>
           </motion.div>
@@ -76,7 +76,7 @@ export default function Certifications() {
             initial={{ y: 40, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.1 }}
-            transition={{ duration: 0.5, delay: i * 0.06, ease: 'easeOut' }}>
+            transition={{ duration: 0.3, delay: i * 0.03, ease: 'easeOut' }}>
             <div className="cert-icon">{c.icon}</div>
             <div className="cert-info"><h4>{c.title}</h4><p>{c.issuer}</p></div>
           </motion.a>

@@ -59,7 +59,7 @@ h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif;line-height:1.2;}
 .navbar{
   position:fixed;top:0;width:100%;z-index:1000;
   background:rgba(11,19,43,0.85);
-  backdrop-filter:blur(18px);
+  backdrop-filter:blur(8px);
   border-bottom:1px solid var(--border);
   transition:box-shadow 0.3s;
 }

@@ -41,7 +41,7 @@ export default function Projects() {
     <section id="projects" className="section">
       <motion.h2 className="section-title"
         initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}>
+        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.4 }}>
         Featured Projects
       </motion.h2>
       <div className="projects-grid">
@@ -50,7 +50,7 @@ export default function Projects() {
             initial={{ y: 60, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true, amount: 0.15 }}
-            transition={{ duration: 0.7, delay: i * 0.12, ease: [0.16,1,0.3,1] }}>
+            transition={{ duration: 0.4, delay: i * 0.05, ease: [0.16,1,0.3,1] }}>
             <div className="project-thumb">{p.icon}</div>
             <div className="project-body">
               <h3>{p.title}</h3>

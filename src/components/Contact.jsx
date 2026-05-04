@@ -37,13 +37,13 @@ export default function Contact() {
     <section id="contact" className="section">
       <motion.h2 className="section-title"
         initial={{ y: 40, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }}
-        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.7 }}>
+        viewport={{ once: true, amount: 0.3 }} transition={{ duration: 0.4 }}>
         Get In Touch
       </motion.h2>
       <div className="contact-grid">
         <motion.div className="contact-info"
           initial={{ x: -60, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: [0.16,1,0.3,1] }}>
+          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4, ease: [0.16,1,0.3,1] }}>
           <h3>Let's Connect</h3>
           <p>I'm currently looking for new opportunities in cybersecurity and full stack development. Whether you have a question or just want to say hi, I'll try my best to get back to you!</p>
           {contactItems.map((item, i) => (
@@ -59,7 +59,7 @@ export default function Contact() {
 
         <motion.div className="contact-form-box"
           initial={{ x: 60, opacity: 0 }} whileInView={{ x: 0, opacity: 1 }}
-          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.8, ease: [0.16,1,0.3,1] }}>
+          viewport={{ once: true, amount: 0.2 }} transition={{ duration: 0.4, ease: [0.16,1,0.3,1] }}>
           <form name="contact" method="POST" data-netlify="true" onSubmit={handleSubmit}>
             <input type="hidden" name="form-name" value="contact" />
             <div className="form-group"><input type="text" name="name" className="form-control" placeholder="Your Name" required /></div>
