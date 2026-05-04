@@ -105,4 +105,36 @@ document.addEventListener('DOMContentLoaded', () => {
     animateElements.forEach(el => {
         observer.observe(el);
     });
+
+    // 6. Netlify Form AJAX Submission
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const btn = contactForm.querySelector('button[type="submit"]');
+            const originalText = btn.innerHTML;
+            btn.innerHTML = 'Sending... <i class="fas fa-spinner fa-spin"></i>';
+
+            const formData = new FormData(contactForm);
+
+            fetch("/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: new URLSearchParams(formData).toString(),
+            })
+            .then(() => {
+                btn.innerHTML = 'Message Sent! <i class="fas fa-check"></i>';
+                contactForm.reset();
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 3000);
+            })
+            .catch((error) => {
+                btn.innerHTML = 'Error! Try Again <i class="fas fa-times"></i>';
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                }, 3000);
+            });
+        });
+    }
 });
