@@ -1032,16 +1032,16 @@ footer {
     height: 100vh;
     width: 100%;
     position: relative;
-    overflow: hidden;
     background: #e2e2e2; /* Light Gray Left Side */
     align-items: center;
 }
 
 .hero-left {
-    flex: 1;
+    flex: none;
+    width: 45%;
     padding-left: 10%;
-    padding-right: 5%;
-    z-index: 2;
+    padding-right: 20px;
+    z-index: 10;
     color: #000000; /* Dark text for light background */
 }
 
@@ -1054,7 +1054,7 @@ footer {
 }
 
 .hero-left .hero-title {
-    font-size: 5rem;
+    font-size: 4vw;
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 10px;
@@ -1112,9 +1112,10 @@ footer {
 }
 
 .hero-img {
-    height: 85%;
-    width: auto;
-    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center top;
     position: relative;
     z-index: 2;
 }
