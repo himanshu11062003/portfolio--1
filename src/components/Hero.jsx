@@ -89,8 +89,8 @@ export default function Hero() {
       {/* RIGHT */}
       <motion.div className="hero-right"
         initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.5, delay: 0.5, ease: [0.16,1,0.3,1] }}>
-        <img src="/photo.jpg" alt="Himanshu Kumar" className="hero-photo" />
+        transition={{ duration: 0.5, delay: 0.2, ease: [0.16,1,0.3,1] }}>
+        <img src="/photo.webp" alt="Himanshu Kumar" className="hero-photo" loading="eager" fetchpriority="high" />
       </motion.div>
     </section>
   );

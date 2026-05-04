@@ -7,6 +7,7 @@ export default function Timeline({ id, title, items }) {
   const [ballTop, setBallTop] = useState(0);
 
   useEffect(() => {
+    let ticking = false;
     function update() {
       if (!tlRef.current || !ballRef.current) return;
       const rect = tlRef.current.getBoundingClientRect();
@@ -14,9 +15,18 @@ export default function Timeline({ id, title, items }) {
       const clamped = Math.max(0, Math.min(tlRef.current.offsetHeight, traveled));
       setBallTop(clamped);
     }
-    window.addEventListener('scroll', update, { passive: true });
+    const onScroll = () => {
+      if (!ticking) {
+        window.requestAnimationFrame(() => {
+          update();
+          ticking = false;
+        });
+        ticking = true;
+      }
+    };
+    window.addEventListener('scroll', onScroll, { passive: true });
     update();
-    return () => window.removeEventListener('scroll', update);
+    return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
   return (
