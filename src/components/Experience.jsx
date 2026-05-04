@@ -4,7 +4,7 @@ const data = [
   {
     title: 'Cyber Security Analyst',
     org: 'Embtel Web Solutions',
-    date: 'August 2026 – Present',
+    date: 'April 2026 – Present',
     points: [
       'Performed comprehensive VAPT on various web applications to ensure robust security postures.',
       'Identified and documented critical vulnerabilities including XSS, SQL Injection, and security misconfigurations.',
