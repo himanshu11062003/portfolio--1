@@ -1,5 +1,4 @@
-import { useEffect, useRef } from 'react';
-import Lenis from 'lenis';
+import { useEffect } from 'react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -8,48 +7,34 @@ import Experience from './components/Experience';
 import Education from './components/Education';
 import Projects from './components/Projects';
 import Certifications from './components/Certifications';
-import Contact from './components/Contact';
 import Footer from './components/Footer';
 import './index.css';
 
 export default function App() {
-  const lenisRef = useRef(null);
-
   useEffect(() => {
-    const lenis = new Lenis({
-      duration: 0.8,
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-      smooth: true,
-      smoothTouch: false,
-    });
-    lenisRef.current = lenis;
-
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    const id = requestAnimationFrame(raf);
-
-    // Smooth nav click scroll
+    // Smooth nav click scroll natively
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', (e) => {
         const target = document.querySelector(anchor.getAttribute('href'));
         if (target) {
           e.preventDefault();
-          lenis.scrollTo(target, { offset: -72, duration: 1.6 });
+          const offset = 72;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = target.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+          });
         }
       });
     });
-
-    return () => {
-      cancelAnimationFrame(id);
-      lenis.destroy();
-    };
   }, []);
 
   return (
     <>
-      <Navbar lenis={lenisRef} />
+      <Navbar />
       <Hero />
       <About />
       <Skills />
