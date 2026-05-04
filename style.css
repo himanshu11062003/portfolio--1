@@ -150,15 +150,15 @@ section{
 #home{
     max-width:none;
     padding:0;
-    min-height:100vh;
+    height:100vh;
+    min-height:600px;
     display:flex;
-    align-items:stretch;
     overflow:hidden;
     position:relative;
 }
 
 .hero-split{
-    width:100%;min-height:100vh;
+    width:100%;height:100%;
     display:flex;align-items:stretch;
     position:relative;
 }
@@ -166,8 +166,9 @@ section{
 /* LEFT */
 .hero-left{
     flex:1;
+    min-width:0;
     display:flex;flex-direction:column;justify-content:center;
-    padding:120px 60px 60px 80px;
+    padding:100px 40px 60px 80px;
     position:relative;z-index:2;
 }
 
@@ -268,10 +269,10 @@ section{
 
 /* RIGHT */
 .hero-right{
-    flex:0 0 44%;
+    flex:0 0 42%;
     position:relative;
-    background: linear-gradient(135deg, #0d1f40 0%, #0b132b 100%);
-    clip-path:polygon(12% 0, 100% 0, 100% 100%, 0% 100%);
+    background:linear-gradient(135deg, #0d1f40 0%, #0b132b 100%);
+    clip-path:polygon(10% 0, 100% 0, 100% 100%, 0% 100%);
     display:flex;align-items:flex-end;justify-content:center;
     overflow:hidden;
 }
@@ -281,8 +282,12 @@ section{
     pointer-events:none;
 }
 .hero-img{
-    width:auto;max-width:100%;height:90%;
-    object-fit:contain;object-position:center bottom;
+    width:auto;
+    max-width:none;
+    height:100%;
+    max-height:100%;
+    object-fit:contain;
+    object-position:center bottom;
     position:relative;z-index:1;
     filter:drop-shadow(0 0 30px rgba(20,184,166,0.15));
 }
@@ -671,13 +676,16 @@ h3.sub-heading{
 
 /* ===== RESPONSIVE ===== */
 @media(max-width:992px){
-    .hero-split{flex-direction:column;}
-    .hero-left{padding:100px 30px 40px;}
+    #home{height:auto;min-height:100vh;}
+    .hero-split{flex-direction:column;height:auto;}
+    .hero-left{padding:100px 30px 40px;flex:none;}
     .hero-right{
-        clip-path:none;flex:0 0 400px;
+        clip-path:none;
+        flex:0 0 380px;
+        width:100%;
         justify-content:center;align-items:flex-end;
     }
-    .hero-img{height:100%;width:auto;max-width:360px;}
+    .hero-img{height:100%;width:auto;max-width:320px;max-height:380px;}
 
     .timeline::before{left:20px;}
     .timeline-item,.timeline-item.left,.timeline-item.right{
