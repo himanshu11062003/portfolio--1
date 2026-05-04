@@ -69,7 +69,7 @@ export default function Hero() {
           <a href="https://www.linkedin.com/in/hs2003" target="_blank" rel="noreferrer" className="social-btn" title="LinkedIn"><FaLinkedinIn /></a>
         </motion.div>
 
-        <motion.div variants={item} style={{ position: 'relative', display: 'inline-block' }}>
+        <motion.div variants={item} style={{ position: 'relative', display: 'inline-block', zIndex: 50 }}>
           <button className="cv-btn" onClick={() => setCvOpen(o => !o)}>
             Download CV <FaChevronDown className={`chevron${cvOpen ? ' open' : ''}`} />
           </button>
