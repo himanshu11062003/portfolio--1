@@ -1109,6 +1109,7 @@ footer {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    filter: drop-shadow(-10px 0 30px rgba(0,0,0,0.5));
 }
 
 .hero-img {
@@ -1134,10 +1135,13 @@ footer {
 .hero-left .btn {
     border-color: #000;
     color: #000;
+    transition: all 0.3s ease;
 }
 .hero-left .btn:hover {
     background: #000;
     color: #fff;
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
 }
 
 @media (max-width: 992px) {
